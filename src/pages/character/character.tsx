@@ -4,7 +4,6 @@ import { characters } from "../../api/characters";
 import { TypeCharacter } from "../home/interface/character.interface";
 import { CharacterCard } from "../../components/characterCard/characterCardById";
 
-
 export const CharacterPage: React.FC = () => {
   const { id } = useParams();
 
@@ -12,7 +11,6 @@ export const CharacterPage: React.FC = () => {
   //   const [character, setCharacter] = useState<TypeCharacter | null>(null);
   const [character, setCharacter] = useState<any>([]);
 
-  console.log(id);
   useEffect(() => {
     setIsLoading(true);
     characters
@@ -37,6 +35,7 @@ export const CharacterPage: React.FC = () => {
         status={character.status}
         species={character.species}
         gender={character.gender}
+        type={character.type}
         created={character.created}
       />
     </div>

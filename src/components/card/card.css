@@ -11,8 +11,20 @@
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 70px;
+  padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .all-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .all-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card-container {
@@ -40,7 +52,6 @@
 .info {
   width: 100%;
   margin: 20px 0px;
-  /* padding: 5px; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,7 +78,7 @@
   cursor: pointer;
   font-weight: 600;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
   border: 0;
   color: #3a4149;
   background: #e7ebee;
@@ -75,7 +86,7 @@
   font-size: 16px;
 }
 
-.card-btn:hover{
+.card-btn:hover {
   background-color: #c7c8cb;
 }
 

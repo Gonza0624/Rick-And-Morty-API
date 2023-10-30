@@ -67,7 +67,7 @@ export const HomePage: React.FC<{}> = () => {
         }}
       >
         <Pagination
-          size="large"
+          size="small"
           variant="outlined"
           color="primary"
           count={count}
